@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Geocoder App</title>
+<head>
+    <link href="../static/main.css" rel="stylesheet">
+</head>
+ <body class="body">
+        <div class="container">
+            <h1>GEOMAPPY GEOCODER</h1>
+            
+            {% block content %}
+
+            <div class="instructions">
+                <h3 align="center">INSTRUCTIONS</h3>
+                <p align="center">Submit a list of addresses using a csv file and <br>GeoMappy will geocode your addresses.<br>
+                    You can also veiw your points on an auto-generated map.</p>
+                <!-- <ul>
+                    <li>Download our template, add your addresses and upload the file</li>
+                    <li>Upload your own .csv or .xlsx file. Please include an Address column.</li>
+                </ul> -->
+            </div>
+
+            <h3>USE THE TEMPLATE:</h3>
+            <p>
+                Download our template, add your addresses and upload the file
+            </p>
+            <a href="{{url_for('csv_template')}}"><button> Download template </button></a>
+            
+            <h3>UPLOAD THE CSV FILE:</h3>
+            <p>
+                Upload your own .csv file or the filled out template.<br>
+                Please make sure to included an 'Address' column.
+            </p>
+            <form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" accept=".csv" name="file"> <br>  
+                <button type="submit" name="submit_csv"> Upload </button>
+            </form>
+
+            {{text | safe}}
+            {% endblock %}
+
+        </div> 
+ </body>
+</html>
+

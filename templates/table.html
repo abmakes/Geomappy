@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="table">
+    <h1>Your Geocoded Addresses:</h1>
+    {{data | safe}}
+    <p>You can now click one of the below options. Display the points on a map or download the table as an Excel file.</p>
+    <a href="{{url_for('downloadFile')}}" target='blank'>
+    <button class="btn"> Download Excel File </button>
+    </a>
+    <a href="{{url_for('show_map')}}" target='blank'>
+        <button class="btn"> Show Map </button>
+    </a>
+</div>
+    <!-- {{data | safe}} -->
+{% endblock %}

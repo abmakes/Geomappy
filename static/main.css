@@ -1,0 +1,64 @@
+.body {
+  margin: 0 auto;
+  background-image: url('tonera.png');
+  background-size: cover;
+  background-color: #2e2e2eea;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 100%;
+    background-color: #2e2e2eea;
+    color: seashell;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: royalblue;
+    margin-top: 80px;
+
+}
+
+.container h3 {
+    color: royalblue;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container form {
+    margin: 30px;
+}
+
+.container button {
+    width: auto;
+    padding: 3px;
+    height: 30px;
+    margin: 15px;
+}
+
+.instructions {
+    margin: auto;
+    width: 460px;
+    align-self: center;
+    text-align: left;
+}
+
+
+table.dataframe, .dataframe th, .dataframe td {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    border-collapse: collapse;
+    text-align:left;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-size: 0.9em;
+  }
